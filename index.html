@@ -122,6 +122,15 @@
             height: 100%;
             object-fit: cover;
             filter: brightness(0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .hero-image img.active {
+            opacity: 1;
         }
 
         .hero-content {
@@ -268,7 +277,7 @@
         }
 
         .intro-logo {
-            margin-bottom: 1.5rem;
+            margin-top: 1.5rem;
             opacity: 0.9;
         }
 
@@ -818,7 +827,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-image">
-            <img src="Facade.jpg" alt="Casa Kohn Facade">
+            <img src="Facade.jpg" alt="Casa Kohn Facade" class="active">
+            <img src="Hero 2.jpg" alt="Casa Kohn">
+            <img src="Hero 3.jpg" alt="Casa Kohn Entrance">
         </div>
         <div class="hero-content">
             <span class="hero-subtitle" data-en="A Masterpiece of Modernist Architecture" data-es="Una Obra Maestra de la Arquitectura Modernista">A Masterpiece of Modernist Architecture</span>
@@ -837,28 +848,28 @@
     <section class="intro">
         <div class="intro-quotes">
             <div class="intro-quote-item">
+                <p class="intro-quote" data-en=""An impressively preserved masterpiece of elegant mid-century design."" data-es=""Una obra maestra de diseño elegante de mediados de siglo, impresionantemente preservada."">"An impressively preserved masterpiece of elegant mid-century design."</p>
                 <div class="intro-logo">
                     <svg viewBox="0 0 150 36" height="40" fill="#3D3229">
                         <text x="0" y="30" font-family="Georgia, serif" font-size="32" font-weight="400" letter-spacing="6">VOGUE</text>
                     </svg>
                 </div>
-                <p class="intro-quote" data-en=""An impressively preserved masterpiece of elegant mid-century design."" data-es=""Una obra maestra de diseño elegante de mediados de siglo, impresionantemente preservada."">"An impressively preserved masterpiece of elegant mid-century design."</p>
             </div>
             <div class="intro-quote-item">
+                <p class="intro-quote" data-en=""The house that brought modernism to Ecuador."" data-es=""La casa que trajo el modernismo a Ecuador."">"The house that brought modernism to Ecuador."</p>
                 <div class="intro-logo">
                     <svg viewBox="0 0 130 28" height="36" fill="#3D3229">
                         <text x="0" y="24" font-family="'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="300" letter-spacing="4">KINFOLK</text>
                     </svg>
                 </div>
-                <p class="intro-quote" data-en=""The house that brought modernism to Ecuador."" data-es=""La casa que trajo el modernismo a Ecuador."">"The house that brought modernism to Ecuador."</p>
             </div>
             <div class="intro-quote-item">
+                <p class="intro-quote" data-en=""An exquisite time capsule of Czech modernism."" data-es=""Una exquisita cápsula del tiempo del modernismo checo."">"An exquisite time capsule of Czech modernism."</p>
                 <div class="intro-logo">
                     <svg viewBox="0 0 180 28" height="32" fill="#3D3229">
                         <text x="0" y="22" font-family="Georgia, serif" font-size="22" font-weight="400">Financial Times</text>
                     </svg>
                 </div>
-                <p class="intro-quote" data-en=""An exquisite time capsule of Czech modernism."" data-es=""Una exquisita cápsula del tiempo del modernismo checo."">"An exquisite time capsule of Czech modernism."</p>
             </div>
         </div>
         <div class="intro-award">
@@ -963,6 +974,54 @@
                 <img src="Garden Exterior.jpg" alt="Garden Exterior">
                 <div class="gallery-item-overlay">
                     <span class="gallery-item-title" data-en="Garden Exterior" data-es="Exterior del Jardín">Garden Exterior</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(15)">
+                <img src="Living Room New.jpg" alt="Living Room">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Living Room" data-es="Sala de Estar">Living Room</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(16)">
+                <img src="Entrance.jpg" alt="Entrance">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Entrance" data-es="Entrada">Entrance</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(17)">
+                <img src="Stairway.jpg" alt="Stairway">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Stairway" data-es="Escalera">Stairway</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(18)">
+                <img src="Bedroom New.jpg" alt="Bedroom">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Bedroom" data-es="Dormitorio">Bedroom</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(19)">
+                <img src="Cupboards.jpg" alt="Cupboards">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Cupboards" data-es="Armarios">Cupboards</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(20)">
+                <img src="Entrance Stairs.jpg" alt="Entrance Stairs">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Entrance Stairs" data-es="Escaleras de Entrada">Entrance Stairs</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(21)">
+                <img src="Kitchen New.jpg" alt="Kitchen">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Kitchen" data-es="Cocina">Kitchen</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(22)">
+                <img src="Detail.jpg" alt="Detail">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title"></span>
                 </div>
             </div>
         </div>
@@ -1183,6 +1242,18 @@
             });
         });
 
+        // Hero image rotation
+        const heroImages = document.querySelectorAll('.hero-image img');
+        let currentHeroIndex = 0;
+
+        function rotateHeroImage() {
+            heroImages[currentHeroIndex].classList.remove('active');
+            currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
+            heroImages[currentHeroIndex].classList.add('active');
+        }
+
+        setInterval(rotateHeroImage, 5000); // Change every 5 seconds
+
         // Lightbox functionality
         const galleryImages = [
             'Front Entrance.jpg',
@@ -1199,7 +1270,15 @@
             'Stairs Details.jpg',
             'Fireplace.jpg',
             'Entrance Porch.jpg',
-            'Garden Exterior.jpg'
+            'Garden Exterior.jpg',
+            'Living Room New.jpg',
+            'Entrance.jpg',
+            'Stairway.jpg',
+            'Bedroom New.jpg',
+            'Cupboards.jpg',
+            'Entrance Stairs.jpg',
+            'Kitchen New.jpg',
+            'Detail.jpg'
         ];
         let currentImageIndex = 0;
 
