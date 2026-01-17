@@ -274,15 +274,22 @@
         .intro-quote-item {
             text-align: center;
             padding: 2rem;
+            display: flex;
+            flex-direction: column;
         }
 
         .intro-logo {
-            margin-top: 1.5rem;
+            margin-top: auto;
+            padding-top: 1.5rem;
             opacity: 0.9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50px;
         }
 
         .intro-logo svg {
-            height: auto;
+            height: 32px;
         }
 
         .intro-quote {
@@ -319,11 +326,11 @@
 
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 300px 1fr;
             gap: 5rem;
             max-width: 1400px;
             margin: 0 auto;
-            align-items: center;
+            align-items: start;
         }
 
         .about-image {
@@ -332,6 +339,7 @@
 
         .about-image img {
             width: 100%;
+            max-width: 300px;
             height: auto;
             filter: grayscale(20%);
         }
@@ -745,7 +753,16 @@
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .about-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                justify-items: center;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
             .location-content {
                 grid-template-columns: 1fr;
                 gap: 3rem;
