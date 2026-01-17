@@ -324,12 +324,23 @@
             background: var(--color-cream);
         }
 
-        .about-grid {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 5rem;
+        .about-content {
             max-width: 1400px;
             margin: 0 auto;
+        }
+
+        .about-name {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: var(--color-dark-brown);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 3rem;
             align-items: start;
         }
 
@@ -339,7 +350,7 @@
 
         .about-image img {
             width: 100%;
-            max-width: 300px;
+            max-width: 220px;
             height: auto;
             filter: grayscale(20%);
         }
@@ -347,20 +358,12 @@
         .about-image::before {
             content: '';
             position: absolute;
-            top: -20px;
-            left: -20px;
-            right: 20px;
-            bottom: 20px;
+            top: -15px;
+            left: -15px;
+            right: 15px;
+            bottom: 15px;
             border: 1px solid var(--color-gold-light);
             z-index: -1;
-        }
-
-        .about-text h3 {
-            font-family: var(--font-serif);
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            color: var(--color-dark-brown);
         }
 
         .about-text p {
@@ -370,7 +373,7 @@
         }
 
         .timeline {
-            margin-top: 2.5rem;
+            margin-top: 3rem;
             padding-top: 2rem;
             border-top: 1px solid var(--color-gold-light);
         }
@@ -409,8 +412,8 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 0.75rem;
             max-width: 1600px;
             margin: 0 auto;
         }
@@ -755,12 +758,16 @@
         @media (max-width: 1024px) {
             .about-grid {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+                gap: 2rem;
                 justify-items: center;
             }
 
             .about-image {
                 order: -1;
+            }
+
+            .about-name {
+                text-align: center;
             }
 
             .location-content {
@@ -976,9 +983,9 @@
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox(12)">
-                <img src="Fireplace.jpg" alt="Fireplace">
+                <img src="Fireplace.jpg" alt="Studio">
                 <div class="gallery-item-overlay">
-                    <span class="gallery-item-title" data-en="Fireplace" data-es="Chimenea">Fireplace</span>
+                    <span class="gallery-item-title" data-en="Studio" data-es="Estudio">Studio</span>
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox(13)">
@@ -1036,9 +1043,15 @@
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox(22)">
-                <img src="Detail.jpg" alt="Detail">
+                <img src="Detail.jpg" alt="Mid Century Chair">
                 <div class="gallery-item-overlay">
-                    <span class="gallery-item-title"></span>
+                    <span class="gallery-item-title" data-en="Mid Century Chair" data-es="Silla de Mediados de Siglo">Mid Century Chair</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(23)">
+                <img src="Entrance 2.jpg" alt="Entrance">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Entrance" data-es="Entrada">Entrance</span>
                 </div>
             </div>
         </div>
@@ -1050,33 +1063,34 @@
             <span class="section-label" data-en="The Story" data-es="La Historia">The Story</span>
             <h2 class="section-title" data-en="A Legacy of Vision" data-es="Un Legado de Visión">A Legacy of Vision</h2>
         </div>
-        <div class="about-grid">
-            <div class="about-image">
-                <img src="Architect.jpg" alt="Karl Kohn, Architect">
+        <div class="about-content">
+            <h3 class="about-name">Karl Kohn (1894&ndash;1979)</h3>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="Architect.jpg" alt="Karl Kohn, Architect">
+                </div>
+                <div class="about-text">
+                    <p data-en="Born in Prague to a German-speaking Jewish family, Karl Kohn trained at the Academy of Fine Arts under the legendary Josef Gočár. Together with his brother Otto, he built an impressive portfolio of work ranging from neo-baroque villas to pioneering functionalist designs for Central Europe's most discerning clients." data-es="Nacido en Praga en una familia judía de habla alemana, Karl Kohn se formó en la Academia de Bellas Artes bajo la dirección del legendario Josef Gočár. Junto con su hermano Otto, construyó un impresionante portafolio de obras que van desde villas neobarrocas hasta diseños funcionalistas pioneros para los clientes más exigentes de Europa Central.">Born in Prague to a German-speaking Jewish family, Karl Kohn trained at the Academy of Fine Arts under the legendary Josef Gočár. Together with his brother Otto, he built an impressive portfolio of work ranging from neo-baroque villas to pioneering functionalist designs for Central Europe's most discerning clients.</p>
+                    <p data-en="In 1939, fleeing Nazi persecution, Kohn and twenty-three members of his family emigrated to Ecuador. What began as exile became a remarkable second chapter: Kohn would go on to design over 105 buildings across Ecuador, fundamentally shaping the nation's modernist architectural identity." data-es="En 1939, huyendo de la persecución nazi, Kohn y veintitrés miembros de su familia emigraron a Ecuador. Lo que comenzó como un exilio se convirtió en un notable segundo capítulo: Kohn diseñaría más de 105 edificios en todo Ecuador, moldeando fundamentalmente la identidad arquitectónica modernista de la nación.">In 1939, fleeing Nazi persecution, Kohn and twenty-three members of his family emigrated to Ecuador. What began as exile became a remarkable second chapter: Kohn would go on to design over 105 buildings across Ecuador, fundamentally shaping the nation's modernist architectural identity.</p>
+                    <p data-en="Casa Kohn, built in 1951 as the family residence, represents the culmination of his artistic vision—a harmonious fusion of European modernist rigor and Ecuadorian sensibility, where architecture and nature exist as one organic whole." data-es="Casa Kohn, construida en 1951 como residencia familiar, representa la culminación de su visión artística—una fusión armoniosa del rigor modernista europeo y la sensibilidad ecuatoriana, donde la arquitectura y la naturaleza existen como un todo orgánico.">Casa Kohn, built in 1951 as the family residence, represents the culmination of his artistic vision&mdash;a harmonious fusion of European modernist rigor and Ecuadorian sensibility, where architecture and nature exist as one organic whole.</p>
+                </div>
             </div>
-            <div class="about-text">
-                <h3>Karl Kohn (1894&ndash;1979)</h3>
-                <p data-en="Born in Prague to a German-speaking Jewish family, Karl Kohn trained at the Academy of Fine Arts under the legendary Josef Gočár. Together with his brother Otto, he built an impressive portfolio of work ranging from neo-baroque villas to pioneering functionalist designs for Central Europe's most discerning clients." data-es="Nacido en Praga en una familia judía de habla alemana, Karl Kohn se formó en la Academia de Bellas Artes bajo la dirección del legendario Josef Gočár. Junto con su hermano Otto, construyó un impresionante portafolio de obras que van desde villas neobarrocas hasta diseños funcionalistas pioneros para los clientes más exigentes de Europa Central.">Born in Prague to a German-speaking Jewish family, Karl Kohn trained at the Academy of Fine Arts under the legendary Josef Gočár. Together with his brother Otto, he built an impressive portfolio of work ranging from neo-baroque villas to pioneering functionalist designs for Central Europe's most discerning clients.</p>
-                <p data-en="In 1939, fleeing Nazi persecution, Kohn and twenty-three members of his family emigrated to Ecuador. What began as exile became a remarkable second chapter: Kohn would go on to design over 105 buildings across Ecuador, fundamentally shaping the nation's modernist architectural identity." data-es="En 1939, huyendo de la persecución nazi, Kohn y veintitrés miembros de su familia emigraron a Ecuador. Lo que comenzó como un exilio se convirtió en un notable segundo capítulo: Kohn diseñaría más de 105 edificios en todo Ecuador, moldeando fundamentalmente la identidad arquitectónica modernista de la nación.">In 1939, fleeing Nazi persecution, Kohn and twenty-three members of his family emigrated to Ecuador. What began as exile became a remarkable second chapter: Kohn would go on to design over 105 buildings across Ecuador, fundamentally shaping the nation's modernist architectural identity.</p>
-                <p data-en="Casa Kohn, built in 1951 as the family residence, represents the culmination of his artistic vision—a harmonious fusion of European modernist rigor and Ecuadorian sensibility, where architecture and nature exist as one organic whole." data-es="Casa Kohn, construida en 1951 como residencia familiar, representa la culminación de su visión artística—una fusión armoniosa del rigor modernista europeo y la sensibilidad ecuatoriana, donde la arquitectura y la naturaleza existen como un todo orgánico.">Casa Kohn, built in 1951 as the family residence, represents the culmination of his artistic vision&mdash;a harmonious fusion of European modernist rigor and Ecuadorian sensibility, where architecture and nature exist as one organic whole.</p>
-
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="timeline-year">1894</span>
-                        <span class="timeline-text" data-en="Born in Prague, Austro-Hungarian Empire" data-es="Nace en Praga, Imperio Austrohúngaro">Born in Prague, Austro-Hungarian Empire</span>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-year">1920</span>
-                        <span class="timeline-text" data-en="Graduates from Academy of Fine Arts, Prague" data-es="Se gradúa de la Academia de Bellas Artes, Praga">Graduates from Academy of Fine Arts, Prague</span>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-year">1939</span>
-                        <span class="timeline-text" data-en="Emigrates to Ecuador; begins teaching at Escuela Nacional de Bellas Artes" data-es="Emigra a Ecuador; comienza a enseñar en la Escuela Nacional de Bellas Artes">Emigrates to Ecuador; begins teaching at Escuela Nacional de Bellas Artes</span>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-year">1951</span>
-                        <span class="timeline-text" data-en="Completes Casa Kohn; awarded Premio Ornato" data-es="Completa Casa Kohn; recibe el Premio Ornato">Completes Casa Kohn; awarded Premio Ornato</span>
-                    </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-year">1894</span>
+                    <span class="timeline-text" data-en="Born in Prague, Austro-Hungarian Empire" data-es="Nace en Praga, Imperio Austrohúngaro">Born in Prague, Austro-Hungarian Empire</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">1920</span>
+                    <span class="timeline-text" data-en="Graduates from Academy of Fine Arts, Prague" data-es="Se gradúa de la Academia de Bellas Artes, Praga">Graduates from Academy of Fine Arts, Prague</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">1939</span>
+                    <span class="timeline-text" data-en="Emigrates to Ecuador; begins teaching at Escuela Nacional de Bellas Artes" data-es="Emigra a Ecuador; comienza a enseñar en la Escuela Nacional de Bellas Artes">Emigrates to Ecuador; begins teaching at Escuela Nacional de Bellas Artes</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">1951</span>
+                    <span class="timeline-text" data-en="Completes Casa Kohn; awarded Premio Ornato" data-es="Completa Casa Kohn; recibe el Premio Ornato">Completes Casa Kohn; awarded Premio Ornato</span>
                 </div>
             </div>
         </div>
@@ -1155,13 +1169,12 @@
         <div class="location-content">
             <div class="location-info">
                 <h3>Quito, Ecuador</h3>
-                <p data-en="Tucked away down the side streets off the busy Avenida 12 de Octubre, Casa Kohn sits in the heart of Quito's vibrant La Floresta neighborhood—a district that has become known as the city's creative and cultural hub." data-es="Escondida en las calles laterales de la concurrida Avenida 12 de Octubre, Casa Kohn se encuentra en el corazón del vibrante barrio La Floresta de Quito—un distrito que se ha convertido en el centro creativo y cultural de la ciudad.">Tucked away down the side streets off the busy Avenida 12 de Octubre, Casa Kohn sits in the heart of Quito's vibrant La Floresta neighborhood&mdash;a district that has become known as the city's creative and cultural hub.</p>
+                <p data-en="Tucked away down the side streets off the busy Avenida 12 de Octubre, Casa Kohn sits in the heart of Quito's vibrant La Mariscal neighborhood—a district that has become known as the city's creative and cultural hub." data-es="Escondida en las calles laterales de la concurrida Avenida 12 de Octubre, Casa Kohn se encuentra en el corazón del vibrante barrio La Mariscal de Quito—un distrito que se ha convertido en el centro creativo y cultural de la ciudad.">Tucked away down the side streets off the busy Avenida 12 de Octubre, Casa Kohn sits in the heart of Quito's vibrant La Mariscal neighborhood&mdash;a district that has become known as the city's creative and cultural hub.</p>
                 <p data-en="Quito itself, a UNESCO World Heritage Site, offers a fascinating blend of colonial grandeur and contemporary energy, set against the dramatic backdrop of the Andes at an elevation of 2,850 meters." data-es="Quito mismo, Patrimonio de la Humanidad de la UNESCO, ofrece una fascinante mezcla de grandeza colonial y energía contemporánea, enmarcado contra el dramático telón de fondo de los Andes a una elevación de 2.850 metros.">Quito itself, a UNESCO World Heritage Site, offers a fascinating blend of colonial grandeur and contemporary energy, set against the dramatic backdrop of the Andes at an elevation of 2,850 meters.</p>
 
                 <div class="location-details">
                     <h4 data-en="Planning Your Visit" data-es="Planifica Tu Visita">Planning Your Visit</h4>
-                    <p><strong data-en="Neighborhood:" data-es="Barrio:">Neighborhood:</strong> La Floresta, Quito</p>
-                    <p><strong data-en="Nearest Landmark:" data-es="Punto de Referencia:">Nearest Landmark:</strong> Avenida 12 de Octubre</p>
+                    <p><strong data-en="Neighborhood:" data-es="Barrio:">Neighborhood:</strong> La Mariscal, Quito</p>
                     <p><strong data-en="Visits:" data-es="Visitas:">Visits:</strong> <span data-en="By appointment only" data-es="Solo con cita previa">By appointment only</span></p>
                 </div>
             </div>
@@ -1269,7 +1282,7 @@
             heroImages[currentHeroIndex].classList.add('active');
         }
 
-        setInterval(rotateHeroImage, 5000); // Change every 5 seconds
+        setInterval(rotateHeroImage, 7000); // Change every 7 seconds
 
         // Lightbox functionality
         const galleryImages = [
@@ -1295,7 +1308,8 @@
             'Cupboards.jpg',
             'Entrance Stairs.jpg',
             'Kitchen New.jpg',
-            'Detail.jpg'
+            'Detail.jpg',
+            'Entrance 2.jpg'
         ];
         let currentImageIndex = 0;
 
