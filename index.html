@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Kohn | A Masterpiece of Modernist Architecture in Quito, Ecuador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-cream: #FAF8F5;
+            --color-warm-white: #FFFEF9;
+            --color-charcoal: #2C2C2C;
+            --color-dark-brown: #3D3229;
+            --color-gold: #B8956E;
+            --color-gold-light: #D4B896;
+            --color-sage: #8B9A7D;
+            --color-terracotta: #C4846C;
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Montserrat', 'Helvetica Neue', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-cream);
+            color: var(--color-charcoal);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.4s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            padding: 1rem 3rem;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            color: var(--color-dark-brown);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-dark-brown);
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 4px;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--color-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--color-warm-white);
+            padding: 2rem;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .hero-year {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            opacity: 0.8;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-warm-white);
+            opacity: 0.7;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator span {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 8rem 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 300;
+            color: var(--color-dark-brown);
+            letter-spacing: 0.05em;
+        }
+
+        /* Introduction */
+        .intro {
+            background: var(--color-warm-white);
+        }
+
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro-award {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid var(--color-gold-light);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .award-label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .award-title {
+            display: block;
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--color-dark-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .award-desc {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--color-charcoal);
+            opacity: 0.7;
+        }
+
+        .intro-quotes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto 5rem;
+        }
+
+        .intro-quote-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .intro-logo {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .intro-logo svg {
+            height: auto;
+        }
+
+        .intro-quote {
+            font-family: var(--font-serif);
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            font-style: italic;
+            font-weight: 300;
+            line-height: 1.8;
+            color: var(--color-dark-brown);
+        }
+
+        .intro-attribution {
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            color: var(--color-gold);
+        }
+
+        @media (max-width: 1024px) {
+            .intro-quotes {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .intro-quote-item {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+
+        /* About Section */
+        .about {
+            background: var(--color-cream);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            filter: grayscale(20%);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid var(--color-gold-light);
+            z-index: -1;
+        }
+
+        .about-text h3 {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: var(--color-dark-brown);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--color-charcoal);
+        }
+
+        .timeline {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-gold-light);
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .timeline-year {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--color-gold);
+            min-width: 60px;
+        }
+
+        .timeline-text {
+            font-size: 0.9rem;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background: var(--color-dark-brown);
+            color: var(--color-warm-white);
+        }
+
+        .gallery .section-label {
+            color: var(--color-gold-light);
+        }
+
+        .gallery .section-title {
+            color: var(--color-warm-white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+
+        .gallery-item:hover .gallery-item-overlay {
+            opacity: 1;
+        }
+
+        .gallery-item-title {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        /* Press Section */
+        .press {
+            background: var(--color-warm-white);
+        }
+
+        .press-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .press-item {
+            padding: 2rem;
+            border: 1px solid rgba(184, 149, 110, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .press-item:hover {
+            border-color: var(--color-gold);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+
+        .press-logo {
+            height: 28px;
+            margin-bottom: 1.2rem;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .press-item:hover .press-logo {
+            opacity: 1;
+        }
+
+        .press-logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .press-source {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .press-item:not(:has(.press-logo)) .press-source {
+            display: block;
+        }
+
+        .press-quote {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--color-dark-brown);
+            margin-bottom: 1rem;
+        }
+
+        .press-link {
+            font-size: 0.75rem;
+            color: var(--color-charcoal);
+            text-decoration: none;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+
+        .press-link:hover {
+            opacity: 1;
+        }
+
+        /* Location Section */
+        .location {
+            background: var(--color-cream);
+        }
+
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .location-info h3 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: var(--color-dark-brown);
+        }
+
+        .location-info p {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .location-details {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--color-warm-white);
+            border-left: 3px solid var(--color-gold);
+        }
+
+        .location-details h4 {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--color-dark-brown);
+        }
+
+        .location-details p {
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .location-map {
+            background: var(--color-dark-brown);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-map img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--color-dark-brown);
+            color: var(--color-warm-white);
+            text-align: center;
+        }
+
+        .contact .section-label {
+            color: var(--color-gold-light);
+        }
+
+        .contact .section-title {
+            color: var(--color-warm-white);
+            margin-bottom: 2rem;
+        }
+
+        .contact-text {
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .contact-email {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--color-gold-light);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .contact-email:hover {
+            border-color: var(--color-gold-light);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: var(--color-warm-white);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            letter-spacing: 0.1em;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 1rem;
+        }
+
+        .lightbox-prev { left: 1rem; }
+        .lightbox-next { right: 1rem; }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: var(--color-dark-brown);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-left: 2rem;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            cursor: pointer;
+            padding: 0.3rem 0.5rem;
+            opacity: 1;
+            transition: opacity 0.3s, color 0.3s;
+        }
+
+        .lang-btn.active {
+            opacity: 0.5;
+            color: var(--color-dark-brown);
+        }
+
+        .lang-btn:hover {
+            opacity: 1;
+        }
+
+        .lang-divider {
+            color: var(--color-dark-brown);
+            opacity: 0.3;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .about-grid,
+            .location-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-image::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--color-cream);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .lang-toggle {
+                margin-left: auto;
+                margin-right: 1rem;
+            }
+
+            section {
+                padding: 5rem 5%;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                letter-spacing: 0.05em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">CASA KOHN</a>
+        <ul class="nav-links">
+            <li><a href="#about" data-en="History" data-es="Historia">History</a></li>
+            <li><a href="#gallery" data-en="Gallery" data-es="Galería">Gallery</a></li>
+            <li><a href="#press" data-en="Press" data-es="Prensa">Press</a></li>
+            <li><a href="#location" data-en="Visit" data-es="Visitar">Visit</a></li>
+            <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+        </ul>
+        <div class="lang-toggle">
+            <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" onclick="setLanguage('es')">ES</button>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="Facade.jpg" alt="Casa Kohn Facade">
+        </div>
+        <div class="hero-content">
+            <span class="hero-subtitle" data-en="A Masterpiece of Modernist Architecture" data-es="Una Obra Maestra de la Arquitectura Modernista">A Masterpiece of Modernist Architecture</span>
+            <h1 class="hero-title">Casa Kohn</h1>
+            <span class="hero-year" data-en="Quito, Ecuador — Est. 1951" data-es="Quito, Ecuador — Est. 1951">Quito, Ecuador &mdash; Est. 1951</span>
+        </div>
+        <div class="scroll-indicator">
+            <span data-en="Scroll" data-es="Desliza">Scroll</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro">
+        <div class="intro-quotes">
+            <div class="intro-quote-item">
+                <div class="intro-logo">
+                    <svg viewBox="0 0 150 36" height="40" fill="#3D3229">
+                        <text x="0" y="30" font-family="Georgia, serif" font-size="32" font-weight="400" letter-spacing="6">VOGUE</text>
+                    </svg>
+                </div>
+                <p class="intro-quote" data-en=""An impressively preserved masterpiece of elegant mid-century design."" data-es=""Una obra maestra de diseño elegante de mediados de siglo, impresionantemente preservada."">"An impressively preserved masterpiece of elegant mid-century design."</p>
+            </div>
+            <div class="intro-quote-item">
+                <div class="intro-logo">
+                    <svg viewBox="0 0 130 28" height="36" fill="#3D3229">
+                        <text x="0" y="24" font-family="'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="300" letter-spacing="4">KINFOLK</text>
+                    </svg>
+                </div>
+                <p class="intro-quote" data-en=""The house that brought modernism to Ecuador."" data-es=""La casa que trajo el modernismo a Ecuador."">"The house that brought modernism to Ecuador."</p>
+            </div>
+            <div class="intro-quote-item">
+                <div class="intro-logo">
+                    <svg viewBox="0 0 180 28" height="32" fill="#3D3229">
+                        <text x="0" y="22" font-family="Georgia, serif" font-size="22" font-weight="400">Financial Times</text>
+                    </svg>
+                </div>
+                <p class="intro-quote" data-en=""An exquisite time capsule of Czech modernism."" data-es=""Una exquisita cápsula del tiempo del modernismo checo."">"An exquisite time capsule of Czech modernism."</p>
+            </div>
+        </div>
+        <div class="intro-award">
+            <span class="award-label" data-en="Winner" data-es="Ganador">Winner</span>
+            <span class="award-title">Premio Ornato 1951</span>
+            <span class="award-desc" data-en="Quito's highest architectural honor" data-es="El máximo honor arquitectónico de Quito">Quito's highest architectural honor</span>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="section-header">
+            <span class="section-label" data-en="Explore" data-es="Explorar">Explore</span>
+            <h2 class="section-title" data-en="The Architecture" data-es="La Arquitectura">The Architecture</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(0)">
+                <img src="Front Entrance.jpg" alt="Front Entrance">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Front Entrance" data-es="Entrada Principal">Front Entrance</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(1)">
+                <img src="Living Room.jpg" alt="Living Room">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Living Room" data-es="Sala de Estar">Living Room</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(2)">
+                <img src="Living Room 2.jpg" alt="Living Room Detail">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Living Room Detail" data-es="Detalle de la Sala">Living Room Detail</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(3)">
+                <img src="Stairs.jpg" alt="Staircase">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Staircase with Living Plants" data-es="Escalera con Plantas">Staircase with Living Plants</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(4)">
+                <img src="Dining.jpg" alt="Dining Room">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Dining Room" data-es="Comedor">Dining Room</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(5)">
+                <img src="Kitchen.jpg" alt="Kitchen">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Kitchen" data-es="Cocina">Kitchen</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(6)">
+                <img src="Bedroom.jpg" alt="Bedroom">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Bedroom" data-es="Dormitorio">Bedroom</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(7)">
+                <img src="Outdoor Dining.jpg" alt="Outdoor Terrace">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Outdoor Terrace" data-es="Terraza Exterior">Outdoor Terrace</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(8)">
+                <img src="Outside.jpg" alt="Garden View">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Garden View" data-es="Vista del Jardín">Garden View</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(9)">
+                <img src="Bedroom 2.jpg" alt="Study">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Study" data-es="Estudio">Study</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(10)">
+                <img src="Living 3.jpg" alt="Conservatory">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Conservatory" data-es="Invernadero">Conservatory</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(11)">
+                <img src="Stairs Details.jpg" alt="Ironwork Detail">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Ironwork Detail" data-es="Detalle de Herrería">Ironwork Detail</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(12)">
+                <img src="Fireplace.jpg" alt="Fireplace">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Fireplace" data-es="Chimenea">Fireplace</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(13)">
+                <img src="Entrance Porch.jpg" alt="Entrance Porch">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Entrance Porch" data-es="Porche de Entrada">Entrance Porch</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(14)">
+                <img src="Garden Exterior.jpg" alt="Garden Exterior">
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-title" data-en="Garden Exterior" data-es="Exterior del Jardín">Garden Exterior</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-header">
+            <span class="section-label" data-en="The Story" data-es="La Historia">The Story</span>
+            <h2 class="section-title" data-en="A Legacy of Vision" data-es="Un Legado de Visión">A Legacy of Vision</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="Architect.jpg" alt="Karl Kohn, Architect">
+            </div>
+            <div class="about-text">
+                <h3>Karl Kohn (1894&ndash;1979)</h3>
+                <p data-en="Born in Prague to a German-speaking Jewish family, Karl Kohn trained at the Academy of Fine Arts under the legendary Josef Gočár. Together with his brother Otto, he built an impressive portfolio of work ranging from neo-baroque villas to pioneering functionalist designs for Central Europe's most discerning clients." data-es="Nacido en Praga en una familia judía de habla alemana, Karl Kohn se formó en la Academia de Bellas Artes bajo la dirección del legendario Josef Gočár. Junto con su hermano Otto, construyó un impresionante portafolio de obras que van desde villas neobarrocas hasta diseños funcionalistas pioneros para los clientes más exigentes de Europa Central.">Born in Prague to a German-speaking Jewish family, Karl Kohn trained at the Academy of Fine Arts under the legendary Josef Gočár. Together with his brother Otto, he built an impressive portfolio of work ranging from neo-baroque villas to pioneering functionalist designs for Central Europe's most discerning clients.</p>
+                <p data-en="In 1939, fleeing Nazi persecution, Kohn and twenty-three members of his family emigrated to Ecuador. What began as exile became a remarkable second chapter: Kohn would go on to design over 105 buildings across Ecuador, fundamentally shaping the nation's modernist architectural identity." data-es="En 1939, huyendo de la persecución nazi, Kohn y veintitrés miembros de su familia emigraron a Ecuador. Lo que comenzó como un exilio se convirtió en un notable segundo capítulo: Kohn diseñaría más de 105 edificios en todo Ecuador, moldeando fundamentalmente la identidad arquitectónica modernista de la nación.">In 1939, fleeing Nazi persecution, Kohn and twenty-three members of his family emigrated to Ecuador. What began as exile became a remarkable second chapter: Kohn would go on to design over 105 buildings across Ecuador, fundamentally shaping the nation's modernist architectural identity.</p>
+                <p data-en="Casa Kohn, built in 1951 as the family residence, represents the culmination of his artistic vision—a harmonious fusion of European modernist rigor and Ecuadorian sensibility, where architecture and nature exist as one organic whole." data-es="Casa Kohn, construida en 1951 como residencia familiar, representa la culminación de su visión artística—una fusión armoniosa del rigor modernista europeo y la sensibilidad ecuatoriana, donde la arquitectura y la naturaleza existen como un todo orgánico.">Casa Kohn, built in 1951 as the family residence, represents the culmination of his artistic vision&mdash;a harmonious fusion of European modernist rigor and Ecuadorian sensibility, where architecture and nature exist as one organic whole.</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-year">1894</span>
+                        <span class="timeline-text" data-en="Born in Prague, Austro-Hungarian Empire" data-es="Nace en Praga, Imperio Austrohúngaro">Born in Prague, Austro-Hungarian Empire</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">1920</span>
+                        <span class="timeline-text" data-en="Graduates from Academy of Fine Arts, Prague" data-es="Se gradúa de la Academia de Bellas Artes, Praga">Graduates from Academy of Fine Arts, Prague</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">1939</span>
+                        <span class="timeline-text" data-en="Emigrates to Ecuador; begins teaching at Escuela Nacional de Bellas Artes" data-es="Emigra a Ecuador; comienza a enseñar en la Escuela Nacional de Bellas Artes">Emigrates to Ecuador; begins teaching at Escuela Nacional de Bellas Artes</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">1951</span>
+                        <span class="timeline-text" data-en="Completes Casa Kohn; awarded Premio Ornato" data-es="Completa Casa Kohn; recibe el Premio Ornato">Completes Casa Kohn; awarded Premio Ornato</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Press Section -->
+    <section class="press" id="press">
+        <div class="section-header">
+            <span class="section-label" data-en="Recognition" data-es="Reconocimiento">Recognition</span>
+            <h2 class="section-title" data-en="In the Press" data-es="En la Prensa">In the Press</h2>
+        </div>
+        <div class="press-grid">
+            <div class="press-item">
+                <a href="https://www.vogue.com/article/quito-ecuador-design-hotspot" target="_blank" class="press-logo">
+                    <svg viewBox="0 0 100 24" height="28" fill="#3D3229">
+                        <text x="0" y="20" font-family="Georgia, serif" font-size="24" font-weight="400" letter-spacing="4">VOGUE</text>
+                    </svg>
+                </a>
+                <p class="press-quote" data-en=""An impressively preserved masterpiece of elegant mid-century design."" data-es=""Una obra maestra de diseño elegante de mediados de siglo, impresionantemente preservada."">"An impressively preserved masterpiece of elegant mid-century design."</p>
+                <a href="https://www.vogue.com/article/quito-ecuador-design-hotspot" class="press-link" target="_blank" data-en="Read Article →" data-es="Leer Artículo →">Read Article &rarr;</a>
+            </div>
+            <div class="press-item">
+                <a href="https://www.ft.com/content/ff763bba-4ba4-465d-8f84-3911e83503e5" target="_blank" class="press-logo">
+                    <svg viewBox="0 0 160 24" height="28" fill="#3D3229">
+                        <text x="0" y="19" font-family="Georgia, serif" font-size="18" font-weight="400">Financial Times</text>
+                    </svg>
+                </a>
+                <p class="press-quote" data-en=""An exquisite time capsule of Czech modernism, with hints of Adolf Loos and Josef Frank tempered with tropical influences."" data-es=""Una exquisita cápsula del tiempo del modernismo checo, con toques de Adolf Loos y Josef Frank templados con influencias tropicales."">"An exquisite time capsule of Czech modernism, with hints of Adolf Loos and Josef Frank tempered with tropical influences."</p>
+                <a href="https://www.ft.com/content/ff763bba-4ba4-465d-8f84-3911e83503e5" class="press-link" target="_blank" data-en="Read Article →" data-es="Leer Artículo →">Read Article &rarr;</a>
+            </div>
+            <div class="press-item">
+                <a href="https://www.kinfolk.com/stories/casa-kohn/" target="_blank" class="press-logo">
+                    <svg viewBox="0 0 100 24" height="28" fill="#3D3229">
+                        <text x="0" y="19" font-family="'Helvetica Neue', sans-serif" font-size="20" font-weight="300" letter-spacing="3">KINFOLK</text>
+                    </svg>
+                </a>
+                <p class="press-quote" data-en=""The house that brought modernism to Ecuador."" data-es=""La casa que trajo el modernismo a Ecuador."">"The house that brought modernism to Ecuador."</p>
+                <a href="https://www.kinfolk.com/stories/casa-kohn/" class="press-link" target="_blank" data-en="Read Article →" data-es="Leer Artículo →">Read Article &rarr;</a>
+            </div>
+            <div class="press-item">
+                <a href="https://www.upstatediary.com/casa-kohn" target="_blank" class="press-logo">
+                    <svg viewBox="0 0 140 24" height="28" fill="#3D3229">
+                        <text x="0" y="18" font-family="'Courier New', monospace" font-size="16" font-weight="400" letter-spacing="1">UPSTATE DIARY</text>
+                    </svg>
+                </a>
+                <p class="press-quote" data-en=""A forgotten pearl of mid-century avant-garde architecture."" data-es=""Una perla olvidada de la arquitectura vanguardista de mediados de siglo."">"A forgotten pearl of mid-century avant-garde architecture."</p>
+                <a href="https://www.upstatediary.com/casa-kohn" class="press-link" target="_blank" data-en="Read Article →" data-es="Leer Artículo →">Read Article &rarr;</a>
+            </div>
+            <div class="press-item">
+                <a href="https://www.designhotels.com/culture/architecture/century-of-styles-modern-architecture-in-quito/" target="_blank" class="press-logo">
+                    <svg viewBox="0 0 150 24" height="28" fill="#3D3229">
+                        <text x="0" y="18" font-family="'Helvetica Neue', sans-serif" font-size="15" font-weight="500" letter-spacing="2">DESIGN HOTELS</text>
+                    </svg>
+                </a>
+                <p class="press-quote" data-en=""The award-winning building was the most modern structure in the country with smart built-in furniture, a glazed conservatory, and wrought iron details."" data-es=""El edificio galardonado fue la estructura más moderna del país con muebles empotrados inteligentes, un invernadero acristalado y detalles de hierro forjado."">"The award-winning building was the most modern structure in the country with smart built-in furniture, a glazed conservatory, and wrought iron details."</p>
+                <a href="https://www.designhotels.com/culture/architecture/century-of-styles-modern-architecture-in-quito/" class="press-link" target="_blank" data-en="Read Article →" data-es="Leer Artículo →">Read Article &rarr;</a>
+            </div>
+            <div class="press-item">
+                <div class="press-logo">
+                    <svg viewBox="0 0 120 24" height="28" fill="#3D3229">
+                        <text x="0" y="18" font-family="Georgia, serif" font-size="16" font-style="italic" font-weight="400">Academic Press</text>
+                    </svg>
+                </div>
+                <p class="press-quote" data-en=""A rare fusion of European modernist rigor and Ecuadorian sensibility."" data-es=""Una rara fusión del rigor modernista europeo y la sensibilidad ecuatoriana."">"A rare fusion of European modernist rigor and Ecuadorian sensibility."</p>
+                <span class="press-link">Zuzana G&uuml;llendi-Cimprichov&aacute;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="section-header">
+            <span class="section-label" data-en="Visit" data-es="Visitar">Visit</span>
+            <h2 class="section-title" data-en="Location" data-es="Ubicación">Location</h2>
+        </div>
+        <div class="location-content">
+            <div class="location-info">
+                <h3>Quito, Ecuador</h3>
+                <p data-en="Tucked away down the side streets off the busy Avenida 12 de Octubre, Casa Kohn sits in the heart of Quito's vibrant La Floresta neighborhood—a district that has become known as the city's creative and cultural hub." data-es="Escondida en las calles laterales de la concurrida Avenida 12 de Octubre, Casa Kohn se encuentra en el corazón del vibrante barrio La Floresta de Quito—un distrito que se ha convertido en el centro creativo y cultural de la ciudad.">Tucked away down the side streets off the busy Avenida 12 de Octubre, Casa Kohn sits in the heart of Quito's vibrant La Floresta neighborhood&mdash;a district that has become known as the city's creative and cultural hub.</p>
+                <p data-en="Quito itself, a UNESCO World Heritage Site, offers a fascinating blend of colonial grandeur and contemporary energy, set against the dramatic backdrop of the Andes at an elevation of 2,850 meters." data-es="Quito mismo, Patrimonio de la Humanidad de la UNESCO, ofrece una fascinante mezcla de grandeza colonial y energía contemporánea, enmarcado contra el dramático telón de fondo de los Andes a una elevación de 2.850 metros.">Quito itself, a UNESCO World Heritage Site, offers a fascinating blend of colonial grandeur and contemporary energy, set against the dramatic backdrop of the Andes at an elevation of 2,850 meters.</p>
+
+                <div class="location-details">
+                    <h4 data-en="Planning Your Visit" data-es="Planifica Tu Visita">Planning Your Visit</h4>
+                    <p><strong data-en="Neighborhood:" data-es="Barrio:">Neighborhood:</strong> La Floresta, Quito</p>
+                    <p><strong data-en="Nearest Landmark:" data-es="Punto de Referencia:">Nearest Landmark:</strong> Avenida 12 de Octubre</p>
+                    <p><strong data-en="Visits:" data-es="Visitas:">Visits:</strong> <span data-en="By appointment only" data-es="Solo con cita previa">By appointment only</span></p>
+                </div>
+            </div>
+            <div class="location-map">
+                <img src="Top.jpg" alt="Aerial view of Casa Kohn">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <span class="section-label" data-en="Get in Touch" data-es="Contáctanos">Get in Touch</span>
+            <h2 class="section-title" data-en="Contact" data-es="Contacto">Contact</h2>
+        </div>
+        <p class="contact-text" data-en="For inquiries about visiting Casa Kohn, press requests, or academic research, please reach out." data-es="Para consultas sobre visitas a Casa Kohn, solicitudes de prensa o investigación académica, por favor contáctenos.">For inquiries about visiting Casa Kohn, press requests, or academic research, please reach out.</p>
+        <a href="mailto:info@casakohn.com" class="contact-email">info@casakohn.com</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">CASA KOHN</div>
+        <p class="footer-text" data-en="© 2026 Casa Kohn. A testament to the vision of Karl Kohn (1894–1979)" data-es="© 2026 Casa Kohn. Un testamento a la visión de Karl Kohn (1894–1979)">&copy; 2026 Casa Kohn. A testament to the vision of Karl Kohn (1894&ndash;1979)</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">&#8249;</button>
+        <img src="" alt="" id="lightbox-img">
+        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">&#8250;</button>
+    </div>
+
+    <script>
+        // Language switching functionality
+        let currentLang = 'en';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`.lang-btn[onclick="setLanguage('${lang}')"]`).classList.add('active');
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-en][data-es]').forEach(el => {
+                const text = el.getAttribute(`data-${lang}`);
+                if (text) {
+                    el.textContent = text;
+                }
+            });
+
+            // Update page title
+            if (lang === 'es') {
+                document.title = 'Casa Kohn | Una Obra Maestra de la Arquitectura Modernista en Quito, Ecuador';
+            } else {
+                document.title = 'Casa Kohn | A Masterpiece of Modernist Architecture in Quito, Ecuador';
+            }
+
+            // Store preference
+            localStorage.setItem('casakohn-lang', lang);
+        }
+
+        // Load saved language preference
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('casakohn-lang');
+            if (savedLang && savedLang !== 'en') {
+                setLanguage(savedLang);
+            }
+        });
+
+        // Navigation scroll effect
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Lightbox functionality
+        const galleryImages = [
+            'Front Entrance.jpg',
+            'Living Room.jpg',
+            'Living Room 2.jpg',
+            'Stairs.jpg',
+            'Dining.jpg',
+            'Kitchen.jpg',
+            'Bedroom.jpg',
+            'Outdoor Dining.jpg',
+            'Outside.jpg',
+            'Bedroom 2.jpg',
+            'Living 3.jpg',
+            'Stairs Details.jpg',
+            'Fireplace.jpg',
+            'Entrance Porch.jpg',
+            'Garden Exterior.jpg'
+        ];
+        let currentImageIndex = 0;
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = galleryImages[index];
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function navigateLightbox(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) currentImageIndex = galleryImages.length - 1;
+            if (currentImageIndex >= galleryImages.length) currentImageIndex = 0;
+            document.getElementById('lightbox-img').src = galleryImages[currentImageIndex];
+        }
+
+        // Close lightbox on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            if (e.key === 'ArrowRight') navigateLightbox(1);
+        });
+
+        // Close lightbox when clicking outside image
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') closeLightbox();
+        });
+    </script>
+</body>
+</html>
